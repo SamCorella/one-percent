@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-md);
+}
+
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  width: 100%;
+  max-width: 400px;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.tagline {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  font-size: var(--font-size-sm);
+}
+
+.field {
+  margin-bottom: var(--space-md);
+}
+
+.label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.input {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--font-size-md);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-md);
+}
+
+.buttons {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  border: none;
+  transition: box-shadow 0.2s, opacity 0.2s;
+}
+
+.buttonPrimary {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+.buttonPrimary:hover:not(:disabled) {
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.buttonSecondary {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.buttonSecondary:hover:not(:disabled) {
+  background-color: var(--accent-glow);
+}
+
+.buttonPrimary:disabled,
+.buttonSecondary:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
