@@ -8,7 +8,7 @@ interface CardSlideshowProps {
 }
 
 export function CardSlideshow({ entries }: CardSlideshowProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(entries.length - 1);
   const touchStartX = useRef(0);
 
   if (entries.length === 0) {

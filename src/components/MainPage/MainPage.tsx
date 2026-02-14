@@ -36,7 +36,7 @@ export function MainPage({
     }
   }, [loading, todayEntry, autoModalShown]);
 
-  const recentEntries = entries.slice(0, 7);
+  const recentEntries = entries.slice(0, 7).reverse();
 
   return (
     <div className={styles.page}>
